@@ -8,4 +8,4 @@ def helloworld(request: Any):
     return render(request, "index.html")
 
 
-urlpatterns = [path("", hello_world, name="world")]
+urlpatterns = [path("", helloworld, name="world")]
