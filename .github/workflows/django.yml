@@ -29,4 +29,4 @@ jobs:
 
       - name: Run tests with pytest & flake8
         run: |
-          pytest --flake8  --flake8-ignore=E501 --cov=world --cov-report=term-missing --cov-fail-under=80
+          pytest --cov=world --cov-report=term-missing --cov-fail-under=80
