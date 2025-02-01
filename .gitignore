@@ -1,12 +1,13 @@
 venv3.12V2/
 # Python bytecode
 __pycache__/
+**/__pycache__/
 *.pyc
 *.pyo
 
 # IDE specific files
 .vscode/
 .idea/
-
+.coverage/
 # MacOS specific files (optional)
 .DS_Store
