@@ -1,5 +1,4 @@
-"""
-WSGI config for books2 project.
+"""WSGI config for books2 project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

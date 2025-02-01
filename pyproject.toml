@@ -2,19 +2,25 @@
 line-length = 88         # Set max line length (default is 88)
 target-version = "py312" # Target Python 3.11
 #select = ["E", "F", "I"] # Enable rules (E: pycodestyle, F: pyflakes, I: isort)
+[tool.ruff.lint]
 ignore = ["E501"] # Ignore specific linting rules
 exclude = ["migrations/", "tests/", "build/"]
 
-select = ["N800", "N810", "N811", "N812", "N813", "N814", "N815"]
-naming-convention = [
-    "E",
-    "F",
-    "I",
-    { variable = "lowercase", pattern = "^[a-z_][a-z0-9_]*$" },    # Variable names in lowercase
-    { constant = "uppercase", pattern = "^[A-Z_][A-Z0-9_]*$" },    # Constant names in uppercase
-    { class = "CamelCase", pattern = "^[A-Z][A-Za-z0-9]*$" },      # Class names in CamelCase
-    { function = "lowercase", pattern = "^[a-z_][a-z0-9_]*$" },     # Function names in lowercase
-]
+select = ["N811", "N812", "N813", "N814", "N815","E", "F", "I","N"]
+
+#naming-convention = {
+#    "function": "snake_case",      # Enforce snake_case for functions
+#    "variable": "snake_case",      # Enforce snake_case for variables
+#    "class": "PascalCase",         # Enforce PascalCase for classes
+#    "constant": "UPPER_CASE",      # Enforce UPPER_CASE for constants
+#    "module": "snake_case",        # Enforce snake_case for modules
+#}
+#naming-convention = [
+#    { variable = "lowercase", pattern = "^[a-z_][a-z0-9_]*$" },    # Variable names in lowercase
+#    { constant = "uppercase", pattern = "^[A-Z_][A-Z0-9_]*$" },    # Constant names in uppercase
+#    { class = "CamelCase", pattern = "^[A-Z][A-Za-z0-9]*$" },      # Class names in CamelCase
+#    { function = "lowercase", pattern = "^[a-z_][a-z0-9_]*$" },     # Function names in lowercase
+#]
 
 [tool.ruff.format]
 quote-style = "double"   # Use double quotes instead of single quotes

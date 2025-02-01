@@ -1,5 +1,4 @@
-"""
-ASGI config for books2 project.
+"""ASGI config for books2 project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
