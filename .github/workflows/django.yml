@@ -27,6 +27,16 @@ jobs:
           pip install -r requirements.txt
           pip install pytest pytest-cov flake8 pytest-flake8
 
+      # Set the DJANGO_SETTINGS_MODULE environment variable
+      - name: Set DJANGO_SETTINGS_MODULE
+        run: echo "DJANGO_SETTINGS_MODULE=books.settings" >> $GITHUB_ENV
+
+      # Run migrations
+      - name: Run migrations
+        run: |
+          python manage.py makemigrations
+          python manage.py migrate
+
       - name: Run tests with pytest & flake8
         run: |
           pytest --cov=world --cov-report=term-missing --cov-fail-under=80

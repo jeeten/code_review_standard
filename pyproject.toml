@@ -5,6 +5,14 @@ select = ["E", "F", "I"] # Enable rules (E: pycodestyle, F: pyflakes, I: isort)
 ignore = ["E501"] # Ignore specific linting rules
 exclude = ["migrations/", "tests/", "build/"]
 
+select = ["N800", "N810", "N811", "N812", "N813", "N814", "N815"]
+naming-convention = [
+    { variable = "lowercase", pattern = "^[a-z_][a-z0-9_]*$" },    # Variable names in lowercase
+    { constant = "uppercase", pattern = "^[A-Z_][A-Z0-9_]*$" },    # Constant names in uppercase
+    { class = "CamelCase", pattern = "^[A-Z][A-Za-z0-9]*$" },      # Class names in CamelCase
+    { function = "lowercase", pattern = "^[a-z_][a-z0-9_]*$" },     # Function names in lowercase
+]
+
 [tool.ruff.format]
 quote-style = "double"   # Use double quotes instead of single quotes
 indent-style = "space"   # Use spaces instead of tabs
