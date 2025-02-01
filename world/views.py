@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.urls import path
 
 
-def hello_world(request: Any):
+def helloworld(request: Any):
     return render(request, "index.html")
 
 
