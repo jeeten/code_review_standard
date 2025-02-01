@@ -1,0 +1,11 @@
+[tool.ruff]
+line-length = 88         # Set max line length (default is 88)
+target-version = "py312" # Target Python 3.11
+select = ["E", "F", "I"] # Enable rules (E: pycodestyle, F: pyflakes, I: isort)
+ignore = ["E501"] # Ignore specific linting rules
+exclude = ["migrations/", "tests/", "build/"]
+
+[tool.ruff.format]
+quote-style = "double"   # Use double quotes instead of single quotes
+indent-style = "space"   # Use spaces instead of tabs
+
