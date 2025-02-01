@@ -6,4 +6,4 @@ exclude = .git,__pycache__,docs,books
 #max-complexity = 10
 count = True
 exit-zero = True
-ignore = E271,E501,E302,W292
+ignore = E271,E501,E302,
