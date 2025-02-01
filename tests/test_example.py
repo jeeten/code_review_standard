@@ -4,7 +4,7 @@ from django.urls import reverse
 
 
 @pytest.mark.django_db
-def test_homepage():
+def testHomepage():
     client = Client()  # Create an instance of Django's test client
     url = reverse("world")
     response = client.get(url)
